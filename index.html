@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Proposta Comercial — Website Executivo | LHCX</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+        
+        :root {
+            --primary: #0088ff;
+            --primary-darker: #0066cc;
+            --primary-light: #e6f5ff;
+            --accent: #39e989;
+            --accent-light: #ecfff5;
+            --bg: #0a0e1d;
+            --bg-2: #131a33;
+            --surface: #1c2342;
+            --surface-hover: #232c52;
+            --text: #f8faff;
+            --muted: #a6bedb;
+            --card-shadow: 0 10px 35px 0 rgba(0,92,200,0.12);
+            --radius: 20px;
+        }
+        
+        html, body {
+            margin: 0; padding: 0; 
+            background: var(--bg); 
+            color: var(--text); 
+            font-family: 'Poppins', 'Segoe UI', Arial, sans-serif; 
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 950px;
+            margin: 40px auto 50px auto;
+            background: var(--bg-2);
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(0,120,255,0.05) 0%, transparent 50%),
+                radial-gradient(circle at 90% 80%, rgba(57,233,137,0.05) 0%, transparent 50%);
+            border-radius: var(--radius);
+            box-shadow: var(--card-shadow);
+            padding: 50px 48px 40px 48px;
+            position: relative;
+            border: 1.5px solid rgba(36, 40, 74, 0.7);
+        }
+        
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+            border-radius: var(--radius) var(--radius) 0 0;
+        }
+        
+        .header {
+            display: flex; 
+            align-items: center; 
+            gap: 38px;
+            border-bottom: 1.5px solid rgba(36, 40, 74, 0.5); 
+            padding-bottom: 28px; 
+            margin-bottom: 34px;
+        }
+        
+        .lhcx-logo {
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            font-size: 2.8rem; 
+            font-weight: 800; 
+            letter-spacing: 0.5px;
+            height: 80px; 
+            width: 130px; 
+            background: linear-gradient(135deg, rgba(13, 20, 46, 0.8) 0%, rgba(19, 26, 51, 0.6) 100%);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .lhcx-logo span.lhc {
+            color: #fff; 
+            font-weight: 700;
+        }
+        
+        .lhcx-logo span.x {
+            color: var(--primary); 
+            font-weight: 900; 
+            font-size: 3rem; 
+            margin-left: 2px;
+            text-shadow: 0 0 10px rgba(0,136,255,0.3);
+        }
+        
+        .header-info h1 {
+            margin: 0; 
+            font-size: 2.4rem; 
+            font-weight: 800; 
+            color: var(--primary);
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+            background: linear-gradient(90deg, var(--primary) 0%, #60b5ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .header-info p {
+            margin: 10px 0 0 0; 
+            color: var(--muted); 
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        .client-highlight {
+            background: linear-gradient(90deg, rgba(28, 35, 66, 0.8) 0%, rgba(25, 34, 58, 0.9) 100%);
+            border-left: 5px solid var(--accent);
+            padding: 22px 26px;
+            border-radius: 14px;
+            font-size: 1.1rem;
+            margin: 30px 0 0 0;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: var(--primary);
+            margin-top: 42px;
+            font-size: 1.5rem;
+            letter-spacing: 0.5px;
+            margin-bottom: 14px;
+            position: relative;
+            padding-left: 16px;
+            display: inline-block;
+        }
+        
+        h2::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 22px;
+            background: var(--accent);
+            border-radius: 4px;
+        }
+        
+        .sobre-lhcx {
+            margin: 24px 0 30px 0;
+            background: rgba(24, 26, 46, 0.6);
+            padding: 26px 30px 20px 30px;
+            border-radius: 16px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+        }
+        
+        .sobre-lhcx strong {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        .pacotes {
+            display: flex; 
+            gap: 24px; 
+            margin: 30px 0 36px 0; 
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .pacote {
+            flex: 1 1 260px;
+            background: var(--surface);
+            border-radius: 18px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            padding: 35px 28px 26px 28px;
+            transition: all 0.3s ease;
+            border: 1.5px solid rgba(33, 38, 74, 0.5);
+            min-width: 250px;
+            max-width: 320px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 5px;
+        }
+        
+        .pacote:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 14px 40px rgba(0, 136, 255, 0.25);
+            border-color: rgba(57, 233, 137, 0.3);
+            background: var(--surface-hover);
+        }
+        
+        .pacote::before {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, rgba(57, 233, 137, 0.1) 0%, transparent 70%);
+            top: -20px;
+            right: -20px;
+            border-radius: 50%;
+            z-index: 0;
+        }
+        
+        .pacote-titulo {
+            font-size: 1.15rem;
+            font-weight: 700;
+            letter-spacing: 0.4px;
+            margin-bottom: 8px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .valor {
+            font-size: 1.7rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin: 12px 0 8px 0;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .valor::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 6px;
+            background: rgba(57, 233, 137, 0.15);
+            bottom: 4px;
+            left: 0;
+            z-index: -1;
+            border-radius: 10px;
+        }
+        
+        ul {
+            margin: 16px 0 0 20px;
+            padding: 0;
+            font-size: 1.02rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            position: relative;
+        }
+        
+        li::marker {
+            color: var(--accent);
+        }
+        
+        .pacote-desc {
+            color: var(--muted);
+            font-size: 0.98rem;
+            margin-top: 14px;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .etapas-projeto {
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 25px; 
+            margin: 30px 0;
+        }
+        
+        .etapa {
+            background: linear-gradient(135deg, rgba(35, 38, 58, 0.8) 0%, rgba(25, 28, 40, 0.9) 100%);
+            border-left: 5px solid var(--primary);
+            border-radius: 16px;
+            padding: 22px 25px;
+            font-size: 1.04rem;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+            transition: transform 0.2s;
+        }
+        
+        .etapa:hover {
+            transform: translateY(-4px);
+        }
+        
+        .etapa strong {
+            color: var(--primary);
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        
+        .cases {
+            margin: 18px 0 30px 0;
+            background: rgba(24, 26, 46, 0.6);
+            padding: 24px 28px;
+            border-radius: 16px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cases-title {
+            color: var(--accent); 
+            font-size: 1.2rem; 
+            font-weight: 700; 
+            margin-bottom: 14px;
+            display: inline-block;
+            position: relative;
+        }
+        
+        .cases-title::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            background: rgba(57, 233, 137, 0.15);
+            bottom: 2px;
+            left: 0;
+            z-index: -1;
+            border-radius: 10px;
+        }
+        
+        .diferenciais, .stack {
+            background: rgba(24, 26, 46, 0.6);
+            padding: 24px 28px;
+            border-radius: 16px;
+            margin-top: 18px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+        }
+        
+        .diferenciais-title, .stack-title {
+            color: var(--primary); 
+            font-weight: 700;
+            font-size: 1.15rem;
+            margin-bottom: 12px;
+            display: inline-block;
+            position: relative;
+        }
+        
+        .diferenciais-title::after, .stack-title::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            background: rgba(0, 136, 255, 0.15);
+            bottom: 2px;
+            left: 0;
+            z-index: -1;
+            border-radius: 10px;
+        }
+        
+        .footer {
+            margin-top: 40px;
+            font-size: 1rem;
+            color: var(--muted);
+            text-align: center;
+            background: rgba(20, 23, 38, 0.6);
+            padding: 22px 24px;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .assinatura {
+            margin-top: 50px;
+            padding: 24px;
+            background: linear-gradient(135deg, rgba(28, 35, 66, 0.5) 0%, rgba(25, 32, 56, 0.7) 100%);
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(57, 233, 137, 0.1);
+        }
+        
+        .assinatura strong { 
+            color: var(--primary); 
+            font-size: 1.2rem; 
+            display: block;
+            margin-bottom: 4px;
+        }
+        
+        a { 
+            color: var(--primary); 
+            text-decoration: none; 
+            transition: all 0.2s;
+            font-weight: 500;
+        }
+        
+        a:hover { 
+            color: var(--accent);
+            text-decoration: none;
+        }
+        
+        @media (max-width: 960px) {
+            .container { 
+                max-width: 95%;
+                padding: 30px 24px; 
+                margin: 20px auto;
+                border-radius: 16px;
+            }
+            
+            .header { 
+                flex-direction: column; 
+                gap: 24px;
+                align-items: center;
+                text-align: center;
+                padding-bottom: 24px;
+                margin-bottom: 24px;
+            }
+            
+            .lhcx-logo { 
+                margin: 0 auto;
+                width: 110px; 
+                height: 60px; 
+                font-size: 2.2rem;
+            }
+            
+            .header-info h1 { 
+                font-size: 1.8rem;
+            }
+            
+            .header-info p {
+                font-size: 1rem;
+            }
+            
+            .client-highlight {
+                padding: 18px 20px;
+                font-size: 1rem;
+                margin: 20px 0 0 0;
+            }
+            
+            .etapas-projeto { 
+                grid-template-columns: 1fr; 
+                gap: 16px;
+            }
+            
+            h2 {
+                font-size: 1.3rem;
+                margin-top: 32px;
+            }
+            
+            .pacotes {
+                gap: 20px;
+            }
+            
+            .pacote {
+                min-width: 100%;
+                max-width: 100%;
+                padding: 24px 20px 20px 20px;
+            }
+            
+            .pacote:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 8px 25px rgba(0, 136, 255, 0.2);
+            }
+            
+            .valor {
+                font-size: 1.5rem;
+            }
+            
+            ul {
+                font-size: 0.98rem;
+                margin-left: 16px;
+            }
+            
+            .etapa {
+                padding: 18px 20px;
+                font-size: 0.98rem;
+            }
+            
+            .sobre-lhcx, .cases, .diferenciais, .stack {
+                padding: 20px 18px;
+            }
+            
+            .footer {
+                padding: 18px 16px;
+                font-size: 0.9rem;
+            }
+            
+            .assinatura {
+                padding: 20px 16px;
+                margin-top: 36px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 24px 16px;
+                margin: 10px auto;
+                border-radius: 14px;
+            }
+            
+            .header-info h1 {
+                font-size: 1.5rem;
+                line-height: 1.3;
+            }
+            
+            .lhcx-logo {
+                height: 50px;
+                width: 100px;
+                font-size: 1.8rem;
+            }
+            
+            .lhcx-logo span.x {
+                font-size: 2.4rem;
+            }
+            
+            h2 {
+                font-size: 1.2rem;
+                padding-left: 12px;
+            }
+            
+            h2::before {
+                width: 3px;
+                height: 18px;
+            }
+            
+            .valor {
+                font-size: 1.4rem;
+            }
+            
+            .pacote-titulo {
+                font-size: 1.05rem;
+            }
+            
+            .pacote-desc {
+                font-size: 0.9rem;
+            }
+            
+            .client-highlight {
+                padding: 16px;
+                font-size: 0.95rem;
+                border-radius: 10px;
+            }
+            
+            p, li {
+                font-size: 0.95rem;
+            }
+            
+            .cases-title, .diferenciais-title, .stack-title {
+                font-size: 1.05rem;
+            }
+            
+            .etapa strong {
+                font-size: 1rem;
+            }
+            
+            .assinatura strong {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <div class="header">
+            <div class="lhcx-logo"><span class="lhc">LHC</span><span class="x">X</span></div>
+            <div class="header-info">
+                <h1>Proposta Comercial: Website Executivo</h1>
+                <p>
+                    <strong>Cliente:</strong> Michele Lima <br>
+                    <strong>Data:</strong> 17/05/2025<br>
+                    <strong>Responsável:</strong> Luis Cuba | <a href="mailto:adm@luiscuba.tech">adm@luiscuba.tech</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- CLIENTE EM FOCO -->
+        <div class="client-highlight">
+            <strong>Michele Lima:</strong> Diretora financeira em grandes empresas, especialista em finanças empresariais e agora empreendendo com consultoria própria, pronta para iniciar seu posicionamento digital de alto impacto.
+        </div>
+
+        <!-- SOBRE LHCX -->
+        <div class="sobre-lhcx">
+            <strong>Sobre a LHCX:</strong> Consultoria de tecnologia, performance e presença digital, atuando com soluções para profissionais e empresas que exigem excelência, agilidade e segurança.<br>
+            <span style="color:#7ce3bc;">Missão:</span> Transformar expertises em autoridade digital real, impulsionando negócios e carreiras.<br>
+            <span style="color:#ffe59c;">Diferenciais:</span> Atendimento consultivo, experiência corporativa, código limpo e design de alto padrão.
+        </div>
+
+        <!-- OBJETIVO -->
+        <h2>Desafio & Objetivo</h2>
+        <p>
+            O objetivo é criar, do zero, a presença digital de uma especialista de referência. O projeto entrega um site institucional, elegante, rápido e seguro, preparado para receber tráfego de clientes premium, atrair novos negócios e reforçar sua marca pessoal.
+        </p>
+
+        <!-- PACOTES -->
+        <h2>Planos de Desenvolvimento</h2>
+        <div class="pacotes">
+            <div class="pacote">
+                <div class="pacote-titulo">Pacote Essencial</div>
+                <div class="valor">R$ 500</div>
+                <ul>
+                    <li>Site institucional até 3 páginas</li>
+                    <li>Design responsivo e moderno (WordPress)</li>
+                    <li>Formulário de contato & WhatsApp</li>
+                    <li>SEO inicial & performance</li>
+                    <li>Orientação sobre domínio/hospedagem</li>
+                </ul>
+                <div class="pacote-desc">Para iniciar com credibilidade, rapidez e presença online efetiva.</div>
+            </div>
+            <div class="pacote">
+                <div class="pacote-titulo">Pacote Profissional</div>
+                <div class="valor">R$ 1.200</div>
+                <ul>
+                    <li>Tudo do Essencial</li>
+                    <li>Até 6 páginas (Serviços, Blog, Depoimentos...)</li>
+                    <li>Google Analytics e Blog configurado</li>
+                    <li>Inclusão de até 3 conteúdos iniciais</li>
+                    <li>Consultoria de posicionamento digital</li>
+                    <li>Otimização avançada de SEO</li>
+                </ul>
+                <div class="pacote-desc">Ideal para iniciar funil de vendas e gerar autoridade.</div>
+            </div>
+            <div class="pacote">
+                <div class="pacote-titulo">Expansão Digital</div>
+                <div class="valor">R$ 2.100</div>
+                <ul>
+                    <li>Tudo do Profissional</li>
+                    <li>Logotipo, paleta, tipografia & identidade visual</li>
+                    <li>Configuração de Instagram e LinkedIn</li>
+                    <li>5 artes para redes sociais</li>
+                    <li>Consultoria estratégica de marca (2h)</li>
+                    <li>Criação de página exclusiva para captação de leads</li>
+                    <li>Automação de email marketing básica</li>
+                </ul>
+                <div class="pacote-desc">Solução completa para acelerar o reconhecimento digital.</div>
+            </div>
+            <div class="pacote">
+                <div class="pacote-titulo">Premium Executivo</div>
+                <div class="valor">R$ 3.000</div>
+                <ul>
+                    <li>Tudo do Expansão Digital</li>
+                    <li>Site com até 10 páginas personalizadas</li>
+                    <li>Área restrita para clientes/materiais</li>
+                    <li>Integração com CRM e ferramentas de gestão</li>
+                    <li>Estratégia completa de SEO para 3 palavras-chave</li>
+                    <li>Produção de 2 vídeos institucionais</li>
+                    <li>Posicionamento digital completo (4h)</li>
+                    <li>1 mês de consultoria de marketing inclusa</li>
+                </ul>
+                <div class="pacote-desc">Solução premium para executivos e consultores de alto nível.</div>
+            </div>
+        </div>
+
+        <!-- ETAPAS DO PROJETO -->
+        <h2>Etapas do Projeto</h2>
+        <div class="etapas-projeto">
+            <div class="etapa">
+                <strong>1. Briefing & Alinhamento</strong><br>
+                Coleta de informações, inspiração visual, definição de tom de voz e objetivos do site.
+            </div>
+            <div class="etapa">
+                <strong>2. Prototipação & Aprovação Visual</strong><br>
+                Criação de layout em alta fidelidade; ajustes até validação da cliente.
+            </div>
+            <div class="etapa">
+                <strong>3. Desenvolvimento & Integrações</strong><br>
+                Montagem do site em WordPress; integrações, otimização para mobile e SEO.
+            </div>
+            <div class="etapa">
+                <strong>4. Testes & Publicação</strong><br>
+                Revisões, correções, publicação no domínio final, treinamento básico e entrega.
+            </div>
+        </div>
+
+        <!-- DIFERENCIAIS -->
+        <div class="diferenciais">
+            <div class="diferenciais-title">Por que a LHCX?</div>
+            <ul>
+                <li>Atuação focada em consultorias, profissionais liberais e C-Levels</li>
+                <li>Design flat, performance real e segurança máxima</li>
+                <li>Suporte técnico próximo e consultoria de negócio</li>
+                <li>Entrega rápida e transparente, com foco no que realmente importa</li>
+            </ul>
+        </div>
+
+        <!-- STACK TECNOLÓGICO -->
+        <div class="stack">
+            <div class="stack-title">Stack & Metodologia</div>
+            <ul>
+                <li><strong>WordPress</strong>: para agilidade e fácil manutenção</li>
+                <li><strong>Elementor Pro</strong>: personalização e liberdade criativa</li>
+                <li><strong>Cloud Hosting</strong>: velocidade e disponibilidade</li>
+                <li>Práticas de UI/UX, SEO, acessibilidade e performance</li>
+            </ul>
+        </div>
+
+        <!-- CASES (EXEMPLOS) -->
+        <div class="cases">
+            <div class="cases-title">Cases & Resultados Recentes</div>
+            <ul>
+                <li><strong>MPRORH</strong>: Desenvolvimento de site institucional completo para consultoria de RH, integração com sistema de vagas e branding digital. <a href="https://lhcx.tech/portfolio/mpro" target="_blank">Ver projeto</a></li>
+                <li><strong>M2B Consultoria</strong>: Redesign de site e estratégia de conteúdo.</li>
+            </ul>
+        </div>
+
+        <!-- CONDIÇÕES COMERCIAIS -->
+        <h2>Condições Comerciais</h2>
+        <ul>
+            <li>Pagamento: condições negociáveis (parcelamento, entrada/entrega)</li>
+            <li>Entrega: até 10 dias úteis após briefing e aprovação</li>
+            <li>Inclui 2 rodadas de revisões por etapa</li>
+            <li>Nota fiscal MEI/LHCX</li>
+            <li>Suporte técnico de 15 dias após publicação</li>
+        </ul>
+
+        <!-- CONSULTORIA MENSAL -->
+        <h2>Consultoria Mensal</h2>
+        <p>Após a entrega do projeto, oferecemos planos de consultoria e manutenção mensal para garantir que sua presença digital continue evoluindo e gerando resultados.</p>
+        
+        <div class="pacotes">
+            <div class="pacote">
+                <div class="pacote-titulo">Consultoria Básica</div>
+                <div class="valor">R$ 100/mês</div>
+                <ul>
+                    <li>Suporte técnico ilimitado</li>
+                    <li>1 atualização de conteúdo/mês</li>
+                    <li>Monitoramento de performance</li>
+                    <li>Relatório mensal simplificado</li>
+                </ul>
+                <div class="pacote-desc">Mantenha seu site seguro e atualizado.</div>
+            </div>
+            <div class="pacote">
+                <div class="pacote-titulo">Consultoria Avançada</div>
+                <div class="valor">R$ 150/mês</div>
+                <ul>
+                    <li>Tudo do Básico</li>
+                    <li>3 atualizações de conteúdo/mês</li>
+                    <li>Otimização contínua de SEO</li>
+                    <li>1 arte para redes sociais/mês</li>
+                    <li>Relatório de desempenho detalhado</li>
+                </ul>
+                <div class="pacote-desc">Mantenha seu site crescendo constantemente.</div>
+            </div>
+            <div class="pacote">
+                <div class="pacote-titulo">Consultoria Premium</div>
+                <div class="valor">R$ 200/mês</div>
+                <ul>
+                    <li>Tudo do Avançado</li>
+                    <li>Atualizações ilimitadas de conteúdo</li>
+                    <li>Reunião mensal estratégica (1h)</li>
+                    <li>3 artes para redes sociais/mês</li>
+                    <li>Análise da concorrência</li>
+                    <li>Consultoria de crescimento digital</li>
+                </ul>
+                <div class="pacote-desc">Estratégia completa para evolução contínua.</div>
+            </div>
+        </div>
+
+        <!-- ASSINATURA -->
+        <div class="assinatura">
+            <strong>Luis Cuba</strong><br>
+            Consultor & Desenvolvedor Executivo<br>
+            <a href="mailto:adm@luiscuba.tech">adm@luiscuba.tech</a> | <a href="https://lhcx.tech">lhcx.tech</a>
+        </div>
+        <div class="footer">
+            © 2025 LHCX — Proposta confidencial. Design by LHCX.<br>
+            "Impulsione sua autoridade. Seja referência digital."
+        </div>
+    </div>
+</body>
+</html>
